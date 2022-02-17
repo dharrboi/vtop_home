@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>VTOP</title>
+    <script src="https://kit.fontawesome.com/978f7c22f1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-200">
+    <div class="flex">
+        <!-- Side Bar -->
+        <div class="bg-indigo-900 w-64 h-screen">
+            <div class="flex justify-center bg-indigo-800">
+                <div class="uppercase font-xl text-gray-100 p-5 text-3xl font-bold">
+                    VTOP
+                </div>
+            </div>
+            <div id="subpages">
+                <div class="flex p-5 justify-between items-center hover:bg-indigo-700 transition duration-400">
+                    <h3 class="text-xl text-white pl-4">Contact</h3>
+                    <i class="fas fa-phone text-xl text-gray-400 pr-10"></i>
+                </div>
+                <div class="flex p-4 justify-between items-center hover:bg-indigo-700 transition duration-400">
+                    <h3 class="text-xl text-white pl-4">My Info</h3>
+                    <i class="fas fa-info-circle text-2xl text-gray-400 pr-10"></i>
+                </div>
+                <div class="flex p-4 justify-between items-center hover:bg-indigo-700 transition duration-400">
+                    <h3 class="text-xl text-white pl-4">Academics</h3>
+                    <i class="fas fa-book text-xl text-gray-400 pr-10"></i>
+                </div>
+                <div class="flex p-4 justify-between items-center hover:bg-indigo-700 transition duration-400">
+                    <h3 class="text-xl text-white pl-4">Proctor</h3>
+                    <i class="fas fa-hands-helping text-xl text-gray-400 pr-10"></i>
+                </div>
+                <div class="flex p-4 justify-between items-center hover:bg-indigo-700 transition duration-400">
+                    <h3 class="text-xl text-white pl-4">Reasearch</h3>
+                    <i class="fas fa-university text-2xl text-gray-400 pr-10"></i>
+                </div>
+                <div class="flex p-4 justify-between items-center hover:bg-indigo-700 transition duration-400">
+                    <h3 class="text-xl text-white pl-4">Exams</h3>
+                    <i class="fas fa-calendar-alt text-xl text-gray-400 pr-10"></i>
+                </div>
+                <div class="flex p-4 justify-between items-center hover:bg-indigo-700 transition duration-400">
+                    <h3 class="text-xl text-white pl-4">Hostels</h3>
+                    <i class="fas fa-hotel text-xl text-gray-400 pr-10"></i>
+                </div>
+                <div class="flex p-4 justify-between items-center hover:bg-indigo-700 transition duration-400">
+                    <h3 class="text-xl text-white pl-4">Payments</h3>
+                    <i class="fas fa-coins text-2xl text-gray-400 pr-10"></i>
+                </div>
+                <div class="flex p-4 justify-between items-center hover:bg-indigo-700 transition duration-400">
+                    <h3 class="text-xl text-white pl-4">Events</h3>
+                    <i class="fab fa-hubspot text-2xl text-gray-400 pr-10"></i>
+                </div>
+                <div class="flex p-4 justify-between items-center hover:bg-red-700 transition duration-400">
+                    <h3 class="text-xl text-white pl-4">Report Bugs</h3>
+                    <i class="fas fa-bug text-2xl text-gray-400 pr-10"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Side Bar -->
+
+    
+        <div class="flex-1 drop-shadow-2xl">
+            <!-- Top Bar -->
+            <div class="flex justify-between px-10 bg-white">
+                <div class="flex items-center">
+                    <div class="text-5xl text-indigo-700">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="uppercase font-xl p-5 text-indigo-700 text-3xl font-bold">
+                        21BCI0022
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <button class="text-xl bg-indigo-700 px-4 py-2 text-gray-200 font-bold rounded-full">Log Out</button>
+                </div>
+            </div>
+            <!-- Top Bar -->
+            <!-- Main Content -->
+            <div class="bg-gray-300 m-7 p-6 rounded-lg">
+                <div class="text-gray-700 text-4xl">Hello, Dharrsan Amarnath 👋</div>
+                <div class="text-xl"></div>
+            </div>
+            <div class="flex m-7 space-x-6 flex-wrap">
+                <div class="md:w-full lg:w-6/12 bg-gray-300 rounded-lg p-5">
+                    <div class="font-bold text-indigo-700 text-3xl">Attendance</div>
+                    <canvas id="chart-1"></canvas>
+                </div>
+                <div class="md:w-11/12 lg:w-4/12 bg-gray-300 rounded-lg p-5">
+                    <div class="font-bold text-indigo-700 text-3xl">VIT Messages</div>
+                    <div class="flex h-5/6 pt-2 text-xl lecture-details px-2 bg-gray-500 rounded-lg mt-4" style="font-family: 'Source Code Pro', monospace;">
+                        <ul id="message-terminal">
+                            <div class="md-2">
+                                <span class="text-green-400 ">BPHY/AnuradhaC$</span>
+                                <span class="text-gray-200">Plagiarism noticed. Call me.</span>
+                            </div>
+                            <div>
+                                <span class="text-green-400 ">Balasubramani$</span>
+                                <span class="text-gray-200">Show the steps. Re-upload the DA.</span>
+                            </div>
+                            <div>
+                                <span class="text-green-400 ">All/HOD_IS$</span>
+                                <span class="text-gray-200">FFCS portal will be open from 10am to 11pm</span>
+                            </div>
+                            <div>
+                                <span class="text-green-400 ">Padma Priya$</span>
+                                <span class="text-gray-200">Studanss plis mail to gyasi sir. last date is 12th Jan</span>
+                            </div>
+                            <div>
+                                <span class="text-green-400 ">Balasubramani$</span>
+                                <span class="text-gray-200">Show the steps. Re-upload the DA.</span>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Content -->
+        </div>
+    </div>
+
+    <!-- Javascript file -->
+    <script src="app.js"></script>
+</body>
+</html>
